@@ -11,6 +11,19 @@ dpkg -i libfdk-aac0_0.1.3+20140816-2_armhf.deb
 
 dpkg -i libfdk-aac-dev_0.1.3+20140816-2_armhf.deb
 
+# git clone https://git.ffmpeg.org/ffmpeg.git ffmpeg
+
+# cd ffmpeg
+
+# ./configure --enable-shared --enable-gpl --enable-nonfree --enable-pthreads --enable-postproc --enable-libtheora --enable-version3 --enable-libx264 --enable-libfdk-aac --disable-stripping --disable-encoder=libschroedinger --enable-librtmp --enable-openssl --enable-gnutls --enable-avfilter --enable-libfreetype --disable-decoder=amrnb --disable-vda --enable-fontconfig --disable-mips32r2 --disable-mipsdspr2 --disable-htmlpages --disable-podpages --disable-altivec --enable-libass --enable-omx --enable-omx-rpi
+
+# make
+
+# ./ffmpeg -v
+# ~/ffmpeg/ffmpeg -v
+
+# find . -name "*.so"
+
 apt-get install ffmpeg
 
 ffmpeg -v
