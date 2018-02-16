@@ -15,3 +15,10 @@ apt-get install ffmpeg
 
 ffmpeg -v
 
+find ~/Desktop/music -name "*.mp3" > ~/Desktop/playlist.txt
+
+/usr/bin/mpg123 -Z --list ~/Desktop/playlist.txt
+
+modprobe snd-aloop pcm_substreams=1
+
+echo 'pcm.!default { type plug slave.pcm 'hw:Loopback,0,0" }' >> ~/.asoundrc
